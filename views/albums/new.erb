@@ -1,0 +1,22 @@
+<h1>Add an Album</h1>
+
+<!-- Is this action the create action's route? -->
+<form action="/albums" method="post">
+  
+  <label for="artist">Select an Artist:</label>
+    <select name="artist">
+      <% @artists.each do |artist| %>
+          <option value= <%= artist.id %> ><%= artist.name %></option>
+      <% end %>
+    </select>
+
+  <label for="name">Album Title:</label>
+  <input type="text" name="name">
+  
+  <input type="submit" name="Submit">
+    
+</form>
+
+
+
+
