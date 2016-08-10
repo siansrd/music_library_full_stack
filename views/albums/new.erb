@@ -1,12 +1,12 @@
-<h1>Add an Album</h1>
+<h3>Add an Album</h3>
 
 <!-- Is this action the create action's route? -->
 <form action="/albums" method="post">
   
   <label for="artist">Select an Artist:</label>
-    <select name="artist">
+    <select name="artist_id">
       <% @artists.each do |artist| %>
-          <option value= <%= artist.id %> ><%= artist.name %></option>
+          <option value=<%= artist.id %> ><%= artist.name %></option>
       <% end %>
     </select>
 

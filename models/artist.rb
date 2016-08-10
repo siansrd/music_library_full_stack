@@ -5,6 +5,7 @@ require_relative('./album')
 
 class Artist
 
+
   attr_reader( :id, :name )
 
   def initialize(options)
@@ -32,6 +33,26 @@ class Artist
     # Save the array to a varibale
     return album_list.map { |album| Album.new(album) }
     # Map the array to a hash.
+  end
+
+
+  def self.delete( id )
+    sql = "DELETE FROM artists WHERE id = #{id}"
+    SqlRunner.run( sql )
+  end
+
+
+  def self.update( options )
+    sql = "UPDATE artists SET 
+      name='#{ options['name'] }' 
+      WHERE id=#{ options['id'] }"
+    SqlRunner.run( sql )
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id}"
+    artist = SqlRunner.run( sql ).first
+    return Artist.new( artist )
   end
 
 

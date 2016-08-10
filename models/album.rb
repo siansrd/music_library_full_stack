@@ -23,6 +23,8 @@ class Album
     Artist.new( artist )
   end
 
+ 
+
   
 
 end

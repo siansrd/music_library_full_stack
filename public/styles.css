@@ -1,0 +1,41 @@
+h1.rotate {
+  float:left;
+  margin-left: -150px;
+  padding-top: 15px;
+  width:100px;
+  -ms-transform: rotate(20deg); /* IE 9 */
+  -webkit-transform: rotate(20deg); /* Safari */
+  transform: rotate(20deg);
+}
+
+
+body {
+  font-family: Georgia, Serif;
+  background: #fffff8;
+  width: 500px;
+  padding-left: 50px;
+  margin: 0 auto;
+}
+
+h3.sub-head {
+  color: orange;
+  margin: 0 10px;
+}
+
+a {
+color: #0044cc;
+}
+
+a:hover {
+  color: #99bbff;
+}
+
+.nav {
+  padding: 30px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 18px;
+}
+

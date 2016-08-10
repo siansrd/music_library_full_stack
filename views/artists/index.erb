@@ -1,5 +1,18 @@
-<h3>All the Artists</h3>
 
-<% @artists.each do |artist| %>
-<p><%= artist.name %></p>
-<% end %>
+
+<h3>All the Artists</h3>
+  <hr>
+
+<!-- Sorts Artists -->
+    <% sorted_artists = @artists.sort { | a,b | a.name <=> b.name } %>
+<!-- Prints Each Artist -->
+    <% sorted_artists.each do |artist| %>
+<!-- Prints Edit Artist Button -->
+      <p>Artist: <%= artist.name %> [<a href="/artists/<%= artist.id %>/edit">Edit</a>]</p>
+  <!-- Print all albums associted with each artist -->
+      <% albums_array = artist.albums() %>
+      <% albums_array.each do |album| %>
+        <p>Album: <%= album.name %></p>
+      <% end %>
+    <hr>
+    <% end %>
