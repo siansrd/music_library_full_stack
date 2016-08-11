@@ -8,11 +8,11 @@
 <!-- Prints Each Artist -->
     <% sorted_artists.each do |artist| %>
 <!-- Prints Edit Artist Button -->
-      <p>Artist: <%= artist.name %> [<a href="/artists/<%= artist.id %>/edit">Edit</a>]</p>
+      <p>Artist: <b><%= artist.name %></b> [<a href="/artists/<%= artist.id %>/edit">Edit</a>]</p>
   <!-- Print all albums associted with each artist -->
       <% albums_array = artist.albums() %>
       <% albums_array.each do |album| %>
-        <p>Album: <%= album.name %></p>
+        <p>Album: <b><%= album.name %></b></p>
       <% end %>
     <hr>
     <% end %>

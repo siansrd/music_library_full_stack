@@ -6,10 +6,11 @@
 </head>
 <body>
   <h1 class="rotate">All The Sounds</h1>
-  <div class="nav"><a href="/artists">Browse Artists</a> | <a href="/artists/new">Add New Artist</a> | <a href="/albums/new">Add New Album</a></div>
-  <hr>
-
-
-  <%= yield %>
+  <div class="nav"><p><a href="/artists">Browse Artists</a></p>
+    <p><a href="/artists/new">Add New Artist</a></p>
+    <p><a href="/albums/new">Add New Album</a></p></div>
+  <div class="content">
+    <%= yield %>
+  </div>
 </body>
 </html>
